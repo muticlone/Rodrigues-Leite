@@ -2,11 +2,15 @@
    🎨 VARIÁVEIS DE CORES
 ========================= */
 :root {
-  --cor-fundo: #1d242f;
-  --cor-scrollbar: #11101d;
-  --cor-scrollbar-hover: #0d0c18;
+  --cor-fundo: #001833;
+  --cor-fundo-claro: #00234b;
+  --cor-dourado: #c19a52;
+  --cor-dourado-hover: #d7b97d;
+
+  --cor-scrollbar: #000c1a;
+  --cor-scrollbar-hover: #c19a52;
   --cor-texto: #ffffff;
-  --cor-titulo: #abb8c3;
+  --cor-titulo: #c19a52;
 }
 
 /* =========================
@@ -20,7 +24,8 @@ body,
 }
 
 body {
-  background-color: var(--cor-fundo);
+  background: radial-gradient(circle at center, var(--cor-fundo-claro) 0%, var(--cor-fundo) 100%);
+  background-attachment: fixed;
   color: var(--cor-texto);
   display: flex;
   flex-direction: column;
@@ -41,19 +46,30 @@ main {
 /* =========================
    📜 SCROLLBAR
 ========================= */
+/* =========================
+   📜 SCROLLBAR COMPLETA
+========================= */
 ::-webkit-scrollbar {
   width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cor-fundo); /* fundo azul */
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--cor-scrollbar);
   border-radius: 10px;
+  border: 1px solid var(--cor-dourado);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--cor-scrollbar-hover);
+  background-color: var(--cor-dourado);
 }
-
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--cor-scrollbar) var(--cor-fundo);
+}
 /* =========================
    📝 TIPOGRAFIA
 ========================= */
@@ -70,7 +86,7 @@ p {
 }
 
 .form-label {
-  color: var(--cor-texto);
+  color: var(--cor-dourado);
 }
 
 /* links */
@@ -79,12 +95,16 @@ a {
   color: inherit;
 }
 
+a:hover {
+  color: var(--cor-dourado);
+}
+
 /* =========================
    🧩 COMPONENTES
 ========================= */
 .cart-icon {
   background-color: transparent;
-  color: currentColor;
+  color: var(--cor-dourado);
   margin-right: 8px;
 }
 
@@ -92,7 +112,9 @@ a {
 .card {
   overflow: hidden;
   border-radius: 12px;
-  background-color: #1a2230;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(193, 154, 82, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 .card-ajuste {
@@ -101,23 +123,42 @@ a {
 
 .card-ajuste:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  border-color: var(--cor-dourado);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
 }
 
 /* imagem */
 .foto-perfil {
   width: 100%;
-  height: 300px;
   object-fit: cover;
   transition: transform 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.container-img {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.foto-projeto {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 20px;
 }
 
 /* =========================
    🦶 FOOTER PROFISSIONAL
 ========================= */
 footer {
-  background-color: #11101d;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: rgba(0, 0, 0, 0.4);
+
   margin-top: auto;
   padding: 20px 0;
   text-align: center;
@@ -137,51 +178,175 @@ footer span:hover {
 
 .hero {
   position: relative;
-  width: 100%;
 }
 
-/* imagem de fundo */
+/* imagem topo */
 .foto-perfil {
   width: 100%;
   height: 60vh;
   object-fit: cover;
-  display: block;
 }
 
-/* NAVBAR por cima da imagem */
-.navbar-overlay {
+/* overlay escuro elegante */
+.hero::after {
+  content: "";
   position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.3)
+  );
+}
+
+/* ================= NAVBAR ================= */
+
+/* ================= NAVBAR ================= */
+.navbar-overlay {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
-
-  background: transparent !important;
-}
-
-/* sombra só quando menu abre */
-.navbar.ativo {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-  background: rgba(0, 0, 0, 0.4) !important;
-}
-
-/* animação suave */
-.navbar {
+  z-index: 9999;
+  background: transparent;
   transition: all 0.3s ease;
 }
 
-/* overlay escuro opcional */
-.navbar-overlay-bg {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.3);
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s ease;
-  z-index: 9;
+/* efeito ao rolar */
+.navbar-overlay.scrolled {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(193, 154, 82, 0.3);
 }
 
-.navbar-overlay-bg.ativo {
-  opacity: 1;
-  visibility: visible;
+/* ================= BOTÃO HAMBURGUER ================= */
+.navbar-toggler {
+  border: none;
+  background-color: transparent !important;
+  z-index: 10000;
+  transition: all 0.2s ease;
+}
+
+/* remove contorno feio ao clicar */
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* pequeno efeito de clique */
+.navbar-toggler:active {
+  transform: scale(0.95);
+}
+
+/* ícone branco */
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ================= MENU ================= */
+.navbar-nav {
+  gap: 8px;
+}
+
+/* links */
+.navbar-nav .nav-link {
+  display: inline-block;
+  min-width: 120px;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  color: white !important;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+/* hover elegante */
+.navbar-nav .nav-link:hover {
+  background: rgba(193, 154, 82, 0.15);
+  color: var(--cor-dourado) !important;
+  border-color: var(--cor-dourado);
+  transform: translateY(-2px);
+}
+
+/* clique */
+.navbar-nav .nav-link:active {
+  transform: scale(0.97);
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    min-width: auto;
+  }
+}
+
+/* ================= BOTÃO WHATSAPP ================= */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+.btn-padrao {
+  min-width: 120px;
+}
+
+/* ================= BOTÕES ================= */
+.btn-whatsapp-custom,
+.btn-instagram-custom,
+.btn-linkedin-custom,
+.btn-email-custom {
+  border-color: transparent;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp-custom:hover {
+  background-color: #25d366;
+  border-color: #25d366;
+}
+
+.btn-instagram-custom:hover {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.btn-linkedin-custom:hover {
+  background-color: #0a66c2;
+  border-color: #0a66c2;
+}
+
+.btn-email-custom:hover {
+  background-color: #ea4335;
+  border-color: #ea4335;
+}
+
+/* ícones */
+.btn-whatsapp-custom svg,
+.btn-instagram-custom svg,
+.btn-linkedin-custom svg,
+.btn-email-custom svg {
+  color: inherit;
 }

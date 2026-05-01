@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dr Emily Leite</title>
+    <title>Rodrigues Leite</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -16,12 +16,12 @@
   <body>
     <div class="hero">
       <img
-        src="./assets/img/perfil2.png"
+        src="./assets/img/capa.PNG"
         alt="Foto de Perfil"
         class="foto-perfil"
       />
 
-      <nav class="navbar navbar-dark navbar-overlay">
+      <nav class="navbar navbar-light navbar-overlay fixed-top">
         <div class="container-fluid">
           <button
             class="navbar-toggler ms-auto"
@@ -30,19 +30,25 @@
             data-bs-target="#menu"
             aria-controls="menu"
             aria-expanded="false"
-            aria-label="Menu"
+            aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse justify-content-end" id="menu">
             <ul class="navbar-nav text-end">
-              <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Serviços</a>
+                <a class="nav-link" href="#inicio">Início</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sobre">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#servico">Serviços</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#local">Contato</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -50,23 +56,27 @@
     </div>
 
     <div class="container">
-      <div class="row">
+      <div class="row" id="inicio">
         <!-- TÍTULO -->
         <div class="col-12 text-center mt-4">
-          <h1>Dr Emily Leite</h1>
+          <!-- <h1>Rodrigues Leite advocacia e acessória jurídica-Direito Previdenciário e da Saúde</h1> -->
           <p class="lead">
-            Advogado(a) e escritório de advocacia • Advogado para menores de
-            idade • Advogado de família
+            Somos um escritório de advocacia com atuação nas áreas de Direito
+            Previdenciário, Cível e da Saúde. Trabalhamos com atendimento
+            humanizado e estratégias eficazes para garantir que seus direitos
+            sejam respeitados na prática, trazendo segurança, dignidade e
+            soluções reais para cada cliente
           </p>
         </div>
 
         <!-- BOTÃO -->
         <div class="col-12 text-center mt-4">
           <a
-            href="https://api.whatsapp.com/send?phone=557798523461&text=%22Ol%C3%A1%2C+Dr%28a%29.+Vi+seu+contato+atrav%C3%A9s+do+site+e+gostaria+de+solicitar+uma+consultoria+jur%C3%ADdica.+Poderia+me+informar+como+funciona+seu+atendimento%3F%22"
+            href="https://api.whatsapp.com/send?phone=5577998523461&text=Olá%21+Seja+bem-vindo%28a%29+😊++%0ASou+a+Dra.+Emile+Leite%2C+advogada+atuante+nas+áreas+previdenciária+e+cível.++%0A%0AFique+à+vontade+para+me+contar+sua+dúvida+ou+situação%2C+será+um+prazer+te+orientar%21"
             class="btn btn-success d-inline-flex align-items-center"
             target="_blank"
             rel="noopener noreferrer"
+            target="_blank"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -86,81 +96,448 @@
         </div>
 
         <!-- SEÇÃO -->
-        <div class="col-12 text-center mt-5">
+        <div class="col-12 text-center mt-5" id="servico">
           <h2>Em quais situações podemos ajudar?</h2>
         </div>
       </div>
 
       <div class="row">
         <!-- CARD -->
-        <div class="col-md-4 col-lg-4 mt-4 col-ajuste">
-          <div class="card card-ajuste" style="background-color: #1d242f">
+        <div class="col-md-3 col-lg-3 mt-4 d-flex">
+          <div
+            class="card card-ajuste w-100 h-100"
+            style="background-color: #1d242f"
+          >
             <div class="card-body text-white text-center">
-              <h6>What is Lorem Ipsum</h6>
+              <h6>Direito Previdenciário</h6>
               <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                Atuação na concessão e revisão de benefícios do INSS, como
+                aposentadorias, pensões, auxílio-doença e salário-maternidade,
+                garantindo o acesso aos seus direitos.
               </p>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4 col-lg-4 mt-4 col-ajuste">
-          <div class="card card-ajuste" style="background-color: #1d242f">
+        <div class="col-md-3 col-lg-3 mt-4 d-flex">
+          <div
+            class="card card-ajuste w-100 h-100"
+            style="background-color: #1d242f"
+          >
             <div class="card-body text-white text-center">
-              <h6>What is Lorem Ipsum</h6>
+              <h6>Direito Médico e da Saúde</h6>
               <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                Defesa dos direitos do paciente frente a planos de saúde e ao
+                SUS, incluindo negativas de cobertura, cirurgias, medicamentos e
+                tratamentos.
               </p>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4 col-lg-4 mt-4 col-ajuste">
-          <div class="card card-ajuste" style="background-color: #1d242f">
+        <div class="col-md-3 col-lg-3 mt-4 d-flex">
+          <div
+            class="card card-ajuste w-100 h-100"
+            style="background-color: #1d242f"
+          >
             <div class="card-body text-white text-center">
-              <h6>What is Lorem Ipsum</h6>
+              <h6>Direito Cível</h6>
               <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                Soluções para conflitos do dia a dia, como indenizações,
+                contratos, responsabilidade civil e questões patrimoniais.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-lg-3 mt-4 d-flex">
+          <div
+            class="card card-ajuste w-100 h-100"
+            style="background-color: #1d242f"
+          >
+            <div class="card-body text-white text-center">
+              <h6>Direito do Consumidor</h6>
+              <p class="card-text">
+                Proteção contra práticas abusivas, cobranças indevidas, produtos
+                ou serviços defeituosos e garantia dos seus direitos nas
+                relações de consumo.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="row pt-2">
+      <div class="row pt-2" id="sobre">
         <div class="col-12 text-center mt-4">
           <h1>Quem somos?</h1>
           <p style="text-align: justify" class="lead">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content
-            here', making it look like It is a long established fact that a
-            reader will be distracted by the readable content of a page when
-            looking at its layout. The point of using Lorem Ipsum is that it has
-            a more-or-less normal distribution of letters, as opposed to using
-            'Content here, content here', making it look like readable English.
-            Many desktop publishing packages and web page editors now use Lorem
-            Ipsum as their default model text, and a search for 'lorem ipsum'
-            will uncover many web sites still in their infancy. Various versions
-            have evolved over the years, sometimes by accident, sometimes on
-            purpose (injected humour and the like)
+            Seja bem-vindo(a). Nosso escritório nasceu da vontade de humanizar o
+            atendimento jurídico e oferecer soluções assertivas para quem mais
+            precisa de amparo legal. Comandado por uma advocacia especializada,
+            nosso foco é garantir que os direitos dos cidadãos não sejam apenas
+            letras em um papel, mas uma realidade que transforma vidas.
+            Especialista em Direito Previdenciário Sabemos que lidar com o INSS
+            pode ser um caminho tortuoso e cheio de burocracias. Por isso,
+            atuamos de forma estratégica para assegurar que você receba o que é
+            seu por direito. Nossa expertise abrange: Auxílio-Doença: Suporte
+            completo para quem está temporariamente incapacitado de trabalhar.
+            BPC/LOAS: Garantia de dignidade para idosos e pessoas com
+            deficiência em situação de vulnerabilidade. Aposentadorias:
+            Planejamento e execução para que você desfrute do seu descanso com o
+            melhor benefício possível. Pensão por Morte: Proteção e amparo à
+            família nos momentos mais difíceis. Salário-Maternidade: Auxílio
+            jurídico para que as mães vivenciem a chegada de seus filhos com
+            tranquilidade financeira. Atuação na Área Cível Além da proteção
+            previdenciária, oferecemos suporte na Área Cível, zelando pelos seus
+            interesses em questões contratuais, responsabilidade civil e
+            conflitos do cotidiano. Acreditamos em uma advocacia preventiva e
+            resolutiva, priorizando sempre a melhor estratégia para o cliente.
+            Por que nos escolher? Atendimento Humanizado: Aqui, você não é
+            apenas um número de processo. Entendemos a urgência da sua causa.
+            Transparência: Você acompanha cada etapa do seu caso com clareza e
+            honestidade. Foco no Resultado: Unimos conhecimento técnico
+            atualizado e dedicação total para alcançar o sucesso nas demandas
+            judiciais e administrativas. Nossa missão é proteger o seu passado,
+            cuidar do seu presente e garantir o seu futuro.
           </p>
         </div>
       </div>
 
-      <!-- LOCALIZAÇÃO -->
       <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-6 mb-4">
+          <div class="card shadow border-0 text-center h-100">
+            <!-- Imagem -->
+            <div class="pt-4">
+              <img
+                src="./assets/img/p1.png"
+                alt="Dra. Emile Leite"
+                class="rounded-circle img-fluid"
+                style="width: 140px; height: 140px; object-fit: cover"
+              />
+            </div>
+
+            <!-- Conteúdo transformado em Flexbox Vertical -->
+            <div class="card-body d-flex flex-column">
+              <!-- Agrupamento do conteúdo superior -->
+              <div>
+                <h5 class="fw-bold mb-1 text-white">Dra. Emile Leite</h5>
+                <small class="text-white">Advogada</small>
+
+                <p class="mb-1 small">Bacharel em Direito pela Anhanguera</p>
+                <p class="mb-3 small">
+                  Pós-graduanda em Direito Civil e Processo Civil pela Fainor
+                </p>
+
+                <!-- Contato -->
+                <div class="mb-3 small text-center">
+                  <div class="mb-1">
+                    <i class="bi bi-envelope-fill me-2"></i>
+                    <span class="text-white">emileleite.adv@gmail.com</span>
+                  </div>
+                  <div>
+                    <i class="bi bi-telephone-fill me-2"></i>
+                    <span class="text-white">(77) 99852-3461</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Botões sociais com 'mt-auto' para empurrar para o fim -->
+              <div class="row mt-auto">
+                <div
+                  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 mb-2"
+                >
+                  <a
+                    href="https://api.whatsapp.com/send?phone=5577998523461&text=Olá%21+Seja+bem-vindo%28a%29+😊++%0ASou+a+Dra.+Emile+Leite%2C+advogada+atuante+nas+áreas+previdenciária+e+cível.++%0A%0AFique+à+vontade+para+me+contar+sua+dúvida+ou+situação%2C+será+um+prazer+te+orientar%21"
+                   class="btn btn-outline-secondary btn-whatsapp-custom d-inline-flex align-items-center btn-padrao w-100 justify-content-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-whatsapp"
+                      viewBox="0 0 16 16"
+                      style="margin-right: 8px"
+                    >
+                      <path
+                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+                      />
+                    </svg>
+                    <span>Whatsapp</span>
+                  </a>
+                </div>
+                <div
+                  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 mb-2"
+                >
+                  <a
+                    href="https://www.instagram.com/adv.emileleite?igsh=MTFpaGtkNHpnbnh4NQ=="
+                    class="btn btn-outline-secondary btn-instagram-custom d-inline-flex align-items-center btn-padrao w-100 justify-content-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-instagram"
+                      viewBox="0 0 16 16"
+                      style="margin-right: 8px"
+                    >
+                      <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                      />
+                    </svg>
+                    <span>Instagram</span>
+                  </a>
+                </div>
+                <div
+                  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 mb-2"
+                >
+                  <a
+                    href="https://www.linkedin.com/in/emile-leiteadv-4a33a4407?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                    class="btn btn-outline-secondary btn-linkedin-custom d-inline-flex align-items-center btn-padrao w-100 justify-content-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-linkedin"
+                      viewBox="0 0 16 16"
+                      style="margin-right: 8px"
+                    >
+                      <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                      />
+                    </svg>
+                    <span>LinkedIn</span>
+                  </a>
+                </div>
+                <div
+                  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 mb-2"
+                >
+                  <a
+                    href="mailto:emileleiteadv@gmail.com?subject=Contato pelo site"
+                    class="btn btn-outline-secondary btn-email-custom d-inline-flex align-items-center btn-padrao w-100 justify-content-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-envelope-at"
+                      viewBox="0 0 16 16"
+                      style="margin-right: 8px"
+                    >
+                      <path
+                        d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"
+                      />
+                      <path
+                        d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648m-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"
+                      />
+                    </svg>
+                    <span>E-mail</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-6 mb-4">
+          <div class="card shadow border-0 text-center h-100">
+            <!-- Imagem -->
+            <div class="pt-4">
+              <img
+                src="./assets/img/p2.jpeg"
+                alt="Dra. Ezisvane Rodrigues Sousa"
+                class="rounded-circle img-fluid"
+                style="width: 140px; height: 140px; object-fit: cover"
+              />
+            </div>
+
+            <!-- Conteúdo transformado em Flexbox Vertical -->
+            <div class="card-body d-flex flex-column">
+              <!-- Agrupamento do conteúdo superior -->
+              <div>
+                <h5 class="fw-bold mb-1 text-white">
+                  Dra. Ezisvane Rodrigues Sousa
+                </h5>
+                <small class="text-white">Advogada</small>
+
+                <p class="mb-1 small">
+                  Universidade Católica do Salvador, Direito Previdenciário e da
+                  Saúde
+                </p>
+                <p class="mb-3 small">
+                  Leap Educação Direito da Saúde, Famintas - Direito Publico
+                </p>
+
+                <!-- Contato -->
+                <div class="mb-3 small text-center">
+                  <div class="mb-1">
+                    <i class="bi bi-envelope-fill me-2"></i>
+                    <span class="text-white">emileleite.adv@gmail.com</span>
+                  </div>
+                  <div>
+                    <i class="bi bi-telephone-fill me-2"></i>
+                    <span class="text-white">(71) 98870-1675</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Botões sociais com 'mt-auto' para empurrar para o fim -->
+              <div class="row mt-auto">
+                <div
+                  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 mb-2"
+                >
+                  <a
+                    href=https://api.whatsapp.com/send?phone=55719887016751&text=Olá%21+Seja+bem-vindo%28a%29+😊++%0ASou+a+Ezisvane+Rodrigues+Sousa%2C+advogada+atuante+nas+áreas+de+Direito+Previdenciário+e+da+Saúde.++%0A%0AFormação%3A+Leap+Educação+%28Direito+da+Saúde%29+e+Famintas+%28Direito+Público%29.%0A%0AFique+à+vontade+para+me+contar+sua+dúvida+ou+situação%2C+será+um+prazer+te+orientar%21"
+                    class="btn btn-outline-secondary btn-whatsapp-custom d-inline-flex align-items-center btn-padrao w-100 justify-content-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-whatsapp"
+                      viewBox="0 0 16 16"
+                      style="margin-right: 8px"
+                    >
+                      <path
+                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+                      />
+                    </svg>
+                    <span>Whatsapp</span>
+                  </a>
+                </div>
+                <div
+                  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 mb-2"
+                >
+                  <a
+                    href="https://www.instagram.com/adv.emileleite?igsh=MTFpaGtkNHpnbnh4NQ=="
+                    class="btn btn-outline-secondary btn-instagram-custom d-inline-flex align-items-center btn-padrao w-100 justify-content-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-instagram"
+                      viewBox="0 0 16 16"
+                      style="margin-right: 8px"
+                    >
+                      <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                      />
+                    </svg>
+                    <span>Instagram</span>
+                  </a>
+                </div>
+                <div
+                  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 mb-2"
+                >
+                  <a
+                    href="https://www.linkedin.com/in/emile-leiteadv-4a33a4407?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                    class="btn btn-outline-secondary btn-linkedin-custom d-inline-flex align-items-center btn-padrao w-100 justify-content-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-linkedin"
+                      viewBox="0 0 16 16"
+                      style="margin-right: 8px"
+                    >
+                      <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                      />
+                    </svg>
+                    <span>LinkedIn</span>
+                  </a>
+                </div>
+                <div
+                  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 mb-2"
+                >
+                  <a
+                    href="mailto:emileleiteadv@gmail.com?subject=Contato pelo site"
+                    class="btn btn-outline-secondary btn-email-custom d-inline-flex align-items-center btn-padrao w-100 justify-content-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-envelope-at"
+                      viewBox="0 0 16 16"
+                      style="margin-right: 8px"
+                    >
+                      <path
+                        d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"
+                      />
+                      <path
+                        d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648m-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"
+                      />
+                    </svg>
+                    <span>E-mail</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOCALIZAÇÃO -->
+      <div class="row" id="local">
         <div class="col-12 text-center mt-5">
           <h2>Onde estamos localizados?</h2>
         </div>
 
         <div class="col-12 text-center">
+          <div class="mb-3 small text-center">
+            <div class="mb-1">
+              <i class="bi bi-envelope-fill me-2"></i>
+              <span class="text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-geo-alt"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                  />
+                  <path
+                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                  />
+                </svg>
+                Av. Caracas, 33 - Jurema, Vitória da Conquista - BA</span
+              >
+            </div>
+            <div>
+              <i class="bi bi-telephone-fill me-2"></i>
+              <span class="text-white">(77) 99852-3461</span>
+              <span class="text-white">(71) 98870-1675</span>
+            </div>
+          </div>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.7875825252813!2d-40.8447112!3d-14.893151599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7463b2f07544cc9%3A0xc72ac371fdb8aa9b!2sShopping%20Conquista%20Sul!5e0!3m2!1spt-BR!2sbr!4v1777642642967!5m2!1spt-BR!2sbr"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856.247536059068!2d-40.8454127!3d-14.867430599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7463b05cfcbf9d7%3A0x892cee9c61212bcf!2sAv.%20Caracas%2C%2033%20-%20Jurema%2C%20Vit%C3%B3ria%20da%20Conquista%20-%20BA%2C%2045023-080!5e0!3m2!1spt-BR!2sbr!4v1777677560493!5m2!1spt-BR!2sbr"
             width="700"
             height="250"
             style="
@@ -171,11 +548,22 @@
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-          >
-          </iframe>
+          ></iframe>
         </div>
       </div>
     </div>
+
+    <a
+      href="https://api.whatsapp.com/send?phone=557798523461&text=%22Ol%C3%A1%2C+Dr%28a%29.+Vi+seu+contato+atrav%C3%A9s+do+site+e+gostaria+de+solicitar+uma+consultoria+jur%C3%ADdica.+Poderia+me+informar+como+funciona+seu+atendimento%3F%22"
+      target="_blank"
+      class="whatsapp-btn"
+      target="_blank"
+    >
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+        alt="WhatsApp"
+      />
+    </a>
 
     <!-- FOOTER -->
     <footer class="footer mt-auto py-4 text-center">
