@@ -350,3 +350,57 @@ footer span:hover {
 .btn-email-custom svg {
   color: inherit;
 }
+
+/* ================= ACCORDION ================= */
+
+/* item geral */
+.accordion-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(193, 154, 82, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+/* botão (título) */
+.accordion-button {
+  background-color: transparent;
+  color: var(--cor-texto);
+  font-weight: 500;
+  box-shadow: none;
+}
+
+/* remove azul padrão ao clicar */
+.accordion-button:focus {
+  box-shadow: none;
+  border: none;
+}
+
+/* quando está aberto */
+.accordion-button:not(.collapsed) {
+  background-color: rgba(193, 154, 82, 0.1);
+  color: var(--cor-dourado);
+}
+
+/* seta */
+.accordion-button::after {
+  filter: invert(1); /* deixa branca */
+}
+
+/* conteúdo */
+.accordion-body {
+  background-color: transparent;
+  color: var(--cor-texto);
+}
+
+/* hover */
+.accordion-button:hover {
+  background-color: rgba(193, 154, 82, 0.1);
+  color: var(--cor-dourado);
+}
+
+.accordion {
+  border-radius: 12px;
+  overflow: hidden;
+}
