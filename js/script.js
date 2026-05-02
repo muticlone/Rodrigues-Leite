@@ -4,18 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggler = document.querySelector(".navbar-toggler");
 
   // =========================
-  // 📌 FECHAR AO CLICAR NO LINK + SCROLL SUAVE
+  // 📌 NAV LINKS
   // =========================
   document.querySelectorAll(".nav-link").forEach((link) => {
     link.addEventListener("click", (e) => {
       const targetId = link.getAttribute("href");
 
-      // fecha menu (forma mais confiável: simular clique no botão)
       if (menu.classList.contains("show")) {
         toggler.click();
       }
 
-      // scroll suave para seção
       if (targetId && targetId.startsWith("#")) {
         const target = document.querySelector(targetId);
 
@@ -34,18 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // =========================
-  // 📜 EFEITO SCROLL NAVBAR
+  // 📜 NAVBAR SCROLL
   // =========================
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 80) {
-      navbarOverlay.classList.add("scrolled");
-    } else {
-      navbarOverlay.classList.remove("scrolled");
-    }
-  });
+ 
 
   // =========================
-  // 🖱️ FECHAR AO CLICAR FORA
+  // 🖱️ CLICK FORA
   // =========================
   document.addEventListener("click", (e) => {
     const isInsideMenu = menu.contains(e.target);
@@ -55,16 +47,78 @@ document.addEventListener("DOMContentLoaded", () => {
       toggler.click();
     }
   });
-});
 
-const btn = document.querySelector(".whatsapp-btn");
+  // =========================
+  // 📱 BOTÃO WHATSAPP FIXO
+  // =========================
+  const whatsappBtn = document.querySelector(".whatsapp-btn");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
-    btn.style.bottom = "30px";
-    btn.style.transform = "scale(0.95)";
-  } else {
-    btn.style.bottom = "20px";
-    btn.style.transform = "scale(1)";
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      whatsappBtn.style.bottom = "30px";
+      whatsappBtn.style.transform = "scale(0.95)";
+    } else {
+      whatsappBtn.style.bottom = "20px";
+      whatsappBtn.style.transform = "scale(1)";
+    }
+  });
+
+  // =========================
+  // ✨ ANIMAÇÃO DO BOTÃO
+  // =========================
+  const btnAnimado = document.querySelector(".btn-whatsapp-animado");
+
+  if (btnAnimado) {
+    setTimeout(() => {
+      btnAnimado.classList.add("show");
+    }, 300);
   }
 });
+
+
+const textos = document.querySelectorAll('.scroll-text');
+
+window.addEventListener('scroll', () => {
+  const windowHeight = window.innerHeight;
+
+  textos.forEach(el => {
+    const rect = el.getBoundingClientRect();
+
+    // 🔥 aumenta a área de animação (mais tempo visível)
+    const start = windowHeight * 0.95; // antes 0.8
+    const end = windowHeight * 0.3;    // antes 0.2
+
+    let progresso = (start - rect.top) / (start - end);
+    progresso = Math.max(0, Math.min(1, progresso));
+
+    // 🔥 suavização mais forte (mais lento)
+    progresso = Math.pow(progresso, 2);
+
+    const textoOriginal = el.dataset.texto || el.innerText;
+    el.dataset.texto = textoOriginal;
+
+    const palavras = textoOriginal.split(" ");
+    const total = palavras.length;
+
+    // 🔥 deixa ainda mais gradual
+    const mostrar = Math.floor(total * progresso);
+
+    el.innerText = palavras.slice(0, mostrar).join(" ");
+
+    // fade mais suave também
+    el.style.opacity = 0.2 + (progresso * 0.8);
+  });
+});
+
+const faq = document.getElementById("faq");
+
+window.addEventListener("scroll", () => {
+  const rect = faq.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  // quando o topo do FAQ estiver visível
+  if (rect.top < windowHeight * 0.85) {
+    faq.classList.add("show");
+  }
+});
+
