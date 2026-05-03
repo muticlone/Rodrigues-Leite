@@ -226,7 +226,7 @@ footer span:hover {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 1050;
   background: transparent;
   transition: all 0.3s ease;
 }
@@ -314,7 +314,7 @@ footer span:hover {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
-  z-index: 998; /* abaixo da navbar */
+   z-index: 1040;
 }
 
 /* ativo */
