@@ -1,19 +1,19 @@
 class MyAccordionItem extends HTMLElement {
   connectedCallback() {
-    if (this.querySelector('.accordion-item')) return;
+    if (this.querySelector(".accordion-item")) return;
 
     const id =
-      this.getAttribute('item-id') ||
+      this.getAttribute("item-id") ||
       `collapse-${Math.random().toString(36).slice(2, 9)}`;
 
-    const title = this.getAttribute('title') || 'Título do Item';
-    const parent = this.getAttribute('parent') || '#accordionExample';
+    const title = this.getAttribute("title") || "Título do Item";
+    const parent = this.getAttribute("parent") || "#accordionExample";
 
     const originalContent = this.innerHTML;
-    this.innerHTML = '';
+    this.innerHTML = "";
 
-    const wrapper = document.createElement('div');
-    wrapper.className = 'accordion-item';
+    const wrapper = document.createElement("div");
+    wrapper.className = "accordion-item";
 
     wrapper.innerHTML = `
       <h2 class="accordion-header">
@@ -46,27 +46,27 @@ class MyAccordionItem extends HTMLElement {
 
     if (!collapseEl) return;
 
-    collapseEl.addEventListener('shown.bs.collapse', () => {
-      // MOBILE FIX: espera layout estabilizar
-      requestAnimationFrame(() => {
-        setTimeout(() => {
-          const header = collapseEl.previousElementSibling;
-          if (!header) return;
+    // Usamos 'show.bs.collapse' para disparar antes da animação começar
+    collapseEl.addEventListener("show.bs.collapse", () => {
+      // Pequeno delay para permitir que o layout comece a se ajustar
+      setTimeout(() => {
+        const header = collapseEl.previousElementSibling;
+        if (!header) return;
 
-          const rect = header.getBoundingClientRect();
+        const rect = header.getBoundingClientRect();
+        // Define um offset para cabeçalhos fixos, ajustável conforme necessário
+        const offset = window.innerWidth < 768 ? 70 : 100; 
+        
+        // Calcula a posição absoluta para onde a página deve rolar
+        const targetTop = rect.top + window.pageYOffset - offset;
 
-          const offset = window.innerWidth < 768 ? 70 : 100;
-
-          const top = rect.top + window.scrollY - offset;
-
-          window.scrollTo({
-            top,
-            behavior: 'smooth',
-          });
-        }, 80);
-      });
+        window.scrollTo({
+          top: targetTop,
+          behavior: "smooth",
+        });
+      }, 150); // 150ms é um bom valor para sincronizar com animações do Bootstrap
     });
   }
 }
 
-customElements.define('my-accordion-item', MyAccordionItem);
+customElements.define("my-accordion-item", MyAccordionItem);
