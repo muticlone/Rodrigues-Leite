@@ -3,29 +3,31 @@
   <head>
     <meta charset="utf-8" />
 
-    <!-- RESPONSIVIDADE (OBRIGATÓRIO) -->
+    <!-- RESPONSIVIDADE -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO PRINCIPAL -->
+    <!-- TÍTULO -->
     <title>Rodrigues Leite | Advocacia Previdenciária, Cível e da Saúde</title>
 
+    <!-- SEO PRINCIPAL -->
     <meta
       name="description"
       content="Escritório de advocacia especializado em Direito Previdenciário, Cível e da Saúde em Vitória da Conquista - BA. Atendimento humanizado e soluções jurídicas eficazes para INSS, planos de saúde e conflitos civis."
     />
-
     <meta name="robots" content="index, follow" />
+    <meta name="author" content="Rodrigues Leite Advocacia" />
 
-    <!-- PALAVRAS-CHAVE (fraco para Google hoje, mas ok manter) -->
+    <!-- PALAVRAS-CHAVE (opcional, Google ignora quase sempre) -->
     <meta
       name="keywords"
       content="advocacia, advogado previdenciário, INSS, direito da saúde, Vitória da Conquista, aposentadoria, pensão por morte, plano de saúde"
     />
 
-    <!-- URL CANÔNICA (evita conteúdo duplicado) -->
+    <!-- CANONICAL -->
     <link rel="canonical" href="https://seudominio.com.br/" />
 
-    <!-- OPEN GRAPH (LINKS BONITOS NO WHATSAPP / INSTAGRAM / FACEBOOK) -->
+    <!-- OPEN GRAPH (WHATSAPP / FACEBOOK / INSTAGRAM) -->
+    <meta property="og:type" content="website" />
     <meta
       property="og:title"
       content="Rodrigues Leite | Advocacia Especializada"
@@ -34,14 +36,13 @@
       property="og:description"
       content="Advocacia especializada em Direito Previdenciário, Saúde e Cível em Vitória da Conquista - BA."
     />
-    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://seudominio.com.br/" />
     <meta
       property="og:image"
       content="https://seudominio.com.br/assets/img/capa.webp"
     />
 
-    <!-- TWITTER CARD (mesmo efeito do Open Graph) -->
+    <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Rodrigues Leite | Advocacia" />
     <meta
@@ -53,25 +54,52 @@
       content="https://seudominio.com.br/assets/img/capa.webp"
     />
 
-    <!-- FAVICON (evita erro 404) -->
+    <!-- GEO LOCAL SEO -->
+    <meta name="geo.region" content="BR-BA" />
+    <meta name="geo.placename" content="Vitória da Conquista" />
+    <meta name="geo.position" content="-14.8674;-40.8454" />
+    <meta name="ICBM" content="-14.8674, -40.8454" />
+
+    <!-- FAVICON -->
     <link rel="icon" href="assets/img/favicon.png" type="image/png" />
 
-    <!-- BOOTSTRAP -->
+    <!-- PRELOAD PERFORMANCE -->
+    <link rel="preload" as="image" href="assets/img/capa.webp" />
+
+    <!-- BOOTSTRAP (OTIMIZADO) -->
     <link
+      rel="preload"
+      as="style"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      />
+    </noscript>
 
-    <link rel="canonical" href="https://SEU-DOMINIO-AQUI.com.br/" />
-
-    <meta property="og:url" content="https://SEU-DOMINIO-AQUI.com.br/" />
-    <meta
-      property="og:image"
-      content="https://SEU-DOMINIO-AQUI.com.br/assets/img/capa.webp"
+    <!-- CSS PRINCIPAL -->
+    <link
+      rel="preload"
+      as="style"
+      href="css/style.css"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
+   <link rel="stylesheet" href="css/style.css" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- PRECONNECT (PERFORMANCE) -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://api.whatsapp.com" />
+    <link rel="preconnect" href="https://www.google.com" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
   </head>
 
   <body>
@@ -87,7 +115,13 @@
           media="(max-width: 1000px)"
         />
 
-        <img src="assets/img/capa.webp" class="foto-perfil" alt="Foto capa" />
+        <img
+          src="assets/img/capa.webp"
+          class="foto-perfil"
+          alt="Foto capa"
+          fetchpriority="high"
+          loading="eager"
+        />
       </picture>
 
       <nav class="navbar navbar-light navbar-overlay fixed-top">
@@ -131,7 +165,9 @@
     <div class="navbar-overlay-bg"></div>
     <div class="container">
       <div class="row" id="inicio">
-        <h1 class="text-center">Advocacia Previdenciária e da Saúde em Vitória da Conquista</h1>
+        <h1 class="text-center">
+          Advocacia Previdenciária e da Saúde em Vitória da Conquista
+        </h1>
         <!-- TÍTULO -->
         <div class="col-12 text-center mt-4">
           <!-- <h1>Rodrigues Leite advocacia e acessória jurídica-Direito Previdenciário e da Saúde</h1> -->
@@ -151,7 +187,6 @@
             class="btn btn-success d-inline-flex align-items-center btn-whatsapp-animado"
             target="_blank"
             rel="noopener noreferrer"
-            target="_blank"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -168,6 +203,7 @@
             </svg>
             <span>Entre em Contato</span>
           </a>
+          
         </div>
 
         <!-- SEÇÃO -->
@@ -950,8 +986,28 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/accordion-item.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/accordion-item.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Rodrigues Leite Advocacia",
+        "image": "https://seudominio.com.br/assets/img/capa.webp",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Vitória da Conquista",
+          "addressRegion": "BA",
+          "addressCountry": "BR"
+        },
+        "telephone": "+5577998523461",
+        "areaServed": "BR",
+        "url": "https://seudominio.com.br"
+      }
+    </script>
   </body>
 </html>
