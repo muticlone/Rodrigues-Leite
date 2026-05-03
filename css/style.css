@@ -133,7 +133,6 @@ a:hover {
 
 /* imagem */
 
-
 .container-img {
   border-radius: 20px;
   overflow: hidden;
@@ -182,8 +181,6 @@ footer span:hover {
 
 .foto-perfil {
   width: 100%;
-
- 
 }
 
 @media (max-width: 768px) {
@@ -192,13 +189,11 @@ footer span:hover {
   }
 }
 
-
 /* overlay escuro elegante */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  
 }
 
 /* ================= NAVBAR ================= */
@@ -261,7 +256,7 @@ footer span:hover {
   padding: 8px 12px;
   border-radius: 10px;
   font-weight: 500;
-  color:var(--cor-dourado) !important;
+  color: var(--cor-dourado) !important;
   transition: all 0.3s ease;
   border: 1px solid transparent;
 }
@@ -410,8 +405,11 @@ footer span:hover {
 
 .btn-whatsapp-animado {
   opacity: 0;
-  transform: translateX(-100px); /* agora começa à esquerda */
+  transform: translate3d(-100px, 0, 0);
   transition: all 0.8s ease;
+
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 
 /* estado final */
