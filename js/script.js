@@ -128,6 +128,22 @@ if (faq) {
   onScroll();
 }
 
+const overlay = document.querySelector('.navbar-overlay-bg');
+const menu = document.querySelector('.navbar-collapse');
+
+menu.addEventListener('show.bs.collapse', () => {
+  overlay.classList.add('active');
+});
+
+menu.addEventListener('hide.bs.collapse', () => {
+  overlay.classList.remove('active');
+});
+
+overlay.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overlay.classList.remove('active');
+});
+
 
 
 

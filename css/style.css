@@ -303,6 +303,26 @@ footer span:hover {
   }
 }
 
+/* fundo escuro quando menu abre */
+.navbar-overlay-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 998; /* abaixo da navbar */
+}
+
+/* ativo */
+.navbar-overlay-bg.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* ================= BOTÃO WHATSAPP ================= */
 .whatsapp-btn {
   position: fixed;
