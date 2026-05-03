@@ -15,11 +15,19 @@
 
   <body>
     <div class="hero">
-      <img
-        src="./assets/img/capa.PNG"
-        alt="Foto de Perfil"
-        class="foto-perfil"
-      />
+      <picture>
+        <source
+          srcset="./assets/img/capamobile.PNG"
+          media="(max-width: 600px)"
+        />
+
+        <source
+          srcset="./assets/img/capaTablet.png"
+          media="(max-width: 1000px)"
+        />
+
+        <img src="./assets/img/capa.png" class="foto-perfil" />
+      </picture>
 
       <nav class="navbar navbar-light navbar-overlay fixed-top">
         <div class="container-fluid">
@@ -746,7 +754,7 @@
                   contribuição Tempo de contribuição: 35 anos (homem) / 30 anos
                   (mulher) Incapacidade permanente Especial
                   (insalubridade/periculosidade) Rural: 60 anos (homem) / 55
-                  anos (mulher) 
+                  anos (mulher)
                 </div>
               </div>
             </div>

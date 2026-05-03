@@ -134,10 +134,17 @@ a:hover {
 /* imagem */
 .foto-perfil {
   width: 100%;
+  height: 100vh; /* ocupa tela inteira */
   object-fit: cover;
   transition: transform 0.4s ease;
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .foto-perfil {
+    height: 50vh; /* ou 50vh, depende do layout */
+  }
 }
 
 .container-img {
