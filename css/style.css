@@ -186,7 +186,11 @@ footer span:hover {
  
 }
 
-
+@media (max-width: 768px) {
+  .foto-perfil {
+    height: 40vh; /* ou 50vh, depende do layout */
+  }
+}
 
 
 /* overlay escuro elegante */
@@ -257,7 +261,7 @@ footer span:hover {
   padding: 8px 12px;
   border-radius: 10px;
   font-weight: 500;
-  color: white !important;
+  color:var(--cor-dourado) !important;
   transition: all 0.3s ease;
   border: 1px solid transparent;
 }
