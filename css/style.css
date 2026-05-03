@@ -29,10 +29,21 @@ body {
     var(--cor-fundo-claro) 0%,
     var(--cor-fundo) 100%
   );
-  background-attachment: fixed;
   color: var(--cor-texto);
   display: flex;
   flex-direction: column;
+}
+
+/* FIX para desktop apenas */
+@media (min-width: 1024px) {
+  body {
+    background-attachment: fixed;
+  }
+}
+
+/* garante fundo estável no mobile (remove flash branco) */
+html {
+  background-color: var(--cor-fundo);
 }
 
 /* layout principal */
