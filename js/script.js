@@ -111,32 +111,39 @@ window.addEventListener("scroll", () => {
 const imagem = document.querySelector(".scroll-img");
 
 window.addEventListener("scroll", () => {
-  const h = window.innerHeight;
+  const windowHeight = window.innerHeight;
 
   textos.forEach((el) => {
     const rect = el.getBoundingClientRect();
 
-    const start = h * 0.9;
-    const end = h * 0.6;
+    const start = windowHeight * 0.95;
+    const end = windowHeight * 0.3;
 
-    let p = (start - rect.top) / (start - end);
-    p = Math.max(0, Math.min(1, p));
+    let progresso = (start - rect.top) / (start - end);
+    progresso = Math.max(0, Math.min(1, progresso));
 
-    p *= 1.8; // velocidade
-    p = Math.min(1, p);
+    progresso = Math.pow(progresso, 2);
 
-    // TEXTO
-    const original = el.dataset.texto || el.innerText;
-    el.dataset.texto = original;
+    // ===== TEXTO =====
+    const textoOriginal = el.dataset.texto || el.innerText;
+    el.dataset.texto = textoOriginal;
 
-    const palavras = original.split(" ");
-    el.innerText = palavras.slice(0, palavras.length * p).join(" ");
-    el.style.opacity = 0.2 + p * 0.8;
+    const palavras = textoOriginal.split(" ");
+    const total = palavras.length;
 
-    // IMAGEM
+    const mostrar = Math.floor(total * progresso);
+
+    el.innerText = palavras.slice(0, mostrar).join(" ");
+    el.style.opacity = 0.2 + progresso * 0.8;
+
+    // ===== IMAGEM (SINCRONIZADA) =====
     if (imagem) {
-      imagem.style.transform = `translateX(${-120 + p * 120}px) scale(${0.95 + p * 0.05})`;
-      imagem.style.opacity = 0.2 + p * 0.8;
+      const deslocamento = -80 + progresso * 80; // vem da esquerda
+      const escala = 0.95 + progresso * 0.05;   // leve zoom
+      const opacidade = 0.2 + progresso * 0.8;
+
+      imagem.style.transform = `translateX(${deslocamento}px) scale(${escala})`;
+      imagem.style.opacity = opacidade;
     }
   });
 });
