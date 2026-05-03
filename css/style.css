@@ -432,6 +432,10 @@ footer span:hover {
 .scroll-text {
   opacity: 0.3;
   transition: opacity 0.4s ease;
+  font-size: 0.99rem;
+  line-height: 1.6;
+  font-weight: 300;
+  font-family: inherit; /* herda a mesma fonte do h1/body */
 }
 
 #faq {
@@ -443,4 +447,17 @@ footer span:hover {
 #faq.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.text-custom {
+  font-size: 1.14rem;
+  line-height: 1.6;
+  font-weight: 300;
+  font-family: inherit; /* herda a mesma fonte do h1/body */
+}
+
+@media (max-width: 768px) {
+  .text-custom {
+    font-size: 0.85rem; /* 0.7rem fica pequeno demais */
+  }
 }

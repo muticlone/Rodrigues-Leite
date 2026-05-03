@@ -112,15 +112,21 @@ window.addEventListener('scroll', () => {
 
 const faq = document.getElementById("faq");
 
-window.addEventListener("scroll", () => {
-  const rect = faq.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
+if (faq) {
+  const onScroll = () => {
+    const rect = faq.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
 
-  // quando o topo do FAQ estiver visível
-  if (rect.top < windowHeight * 0.85) {
-    faq.classList.add("show");
-  }
-});
+    if (rect.top < windowHeight * 0.85) {
+      faq.classList.add("show");
+    }
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  // dispara uma vez no load também
+  onScroll();
+}
 
 
 
