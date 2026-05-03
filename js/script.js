@@ -123,18 +123,4 @@ window.addEventListener("scroll", () => {
 });
 
 
-// function atualizarImagem() {
-//   const img = document.getElementById("fotoPerfil");
 
-//   if (window.innerWidth <= 480) {
-//     img.src = "./assets/img/capamobile.PNG";
-//   } else {
-//     img.src = "./assets/img/capa.PNG";
-//   }
-// }
-
-// // roda ao carregar
-// atualizarImagem();
-
-// // roda ao redimensionar
-// window.addEventListener("resize", atualizarImagem);

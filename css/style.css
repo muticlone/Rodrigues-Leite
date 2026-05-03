@@ -380,6 +380,7 @@ footer span:hover {
   color: var(--cor-texto);
   font-weight: 500;
   box-shadow: none;
+  cursor: pointer;
 }
 
 /* remove azul padrão ao clicar */
