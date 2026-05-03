@@ -29,7 +29,7 @@ body,
 body {
   background: radial-gradient(
     circle at center,
-    var(--cor-fundo-claro) 0%,
+    
     var(--cor-fundo) 100%
   );
   color: var(--cor-texto);
