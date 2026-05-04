@@ -593,6 +593,19 @@ footer span:hover {
 #faq.show > div:nth-of-type(2) {
   transition-delay: 0.38s;
 }
+
+@media (max-width: 768px) {
+  #faq,
+  #faq > h1,
+  #faq > p,
+  #faq > div {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
+
 .text-custom {
   font-size: 1.14rem;
   line-height: 1.6;

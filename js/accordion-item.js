@@ -6,7 +6,7 @@ class MyAccordionItem extends HTMLElement {
       this.getAttribute("item-id") ||
       `collapse-${Math.random().toString(36).slice(2, 9)}`;
 
-    const title = this.getAttribute("title") || "Título do Item";
+    const title = this.getAttribute("title") || "Titulo do Item";
     const parent = this.getAttribute("parent") || "#accordionExample";
 
     const originalContent = this.innerHTML;
@@ -46,25 +46,20 @@ class MyAccordionItem extends HTMLElement {
 
     if (!collapseEl) return;
 
-    // Usamos 'show.bs.collapse' para disparar antes da animação começar
     collapseEl.addEventListener("show.bs.collapse", () => {
-      // Pequeno delay para permitir que o layout comece a se ajustar
       setTimeout(() => {
         const header = collapseEl.previousElementSibling;
         if (!header) return;
 
         const rect = header.getBoundingClientRect();
-        // Define um offset para cabeçalhos fixos, ajustável conforme necessário
-        const offset = window.innerWidth < 768 ? 70 : 100; 
-        
-        // Calcula a posição absoluta para onde a página deve rolar
+        const offset = window.innerWidth < 768 ? 58 : 100;
         const targetTop = rect.top + window.pageYOffset - offset;
 
         window.scrollTo({
-          top: targetTop,
+          top: Math.max(targetTop, 0),
           behavior: "smooth",
         });
-      }, 150); // 150ms é um bom valor para sincronizar com animações do Bootstrap
+      }, 60);
     });
   }
 }

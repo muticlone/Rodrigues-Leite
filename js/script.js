@@ -22,11 +22,18 @@ document.addEventListener("DOMContentLoaded", () => {
           e.preventDefault();
 
           setTimeout(() => {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
+            const navbarHeight = navbarOverlay
+              ? navbarOverlay.offsetHeight
+              : 0;
+            const offset = window.innerWidth < 768 ? navbarHeight + 12 : 90;
+            const targetTop =
+              target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+            window.scrollTo({
+              top: Math.max(targetTop, 0),
+              behavior: window.innerWidth < 768 ? "auto" : "smooth",
             });
-          }, 150);
+          }, 60);
         }
       }
     });
@@ -105,7 +112,9 @@ document.addEventListener("DOMContentLoaded", () => {
     revealElements.forEach((el) => revealObserver.observe(el));
   }
 
-  if (faq) {
+  if (faq && window.innerWidth < 768) {
+    faq.classList.add("show");
+  } else if (faq) {
     const faqObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
