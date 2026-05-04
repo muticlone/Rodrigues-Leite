@@ -86,7 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const revealElements = document.querySelectorAll(".scroll-text, .scroll-img, #faq");
+  const revealElements = document.querySelectorAll(".scroll-text, .scroll-img");
+  const faq = document.querySelector("#faq");
 
   if (revealElements.length) {
     const revealObserver = new IntersectionObserver(
@@ -102,6 +103,22 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     revealElements.forEach((el) => revealObserver.observe(el));
+  }
+
+  if (faq) {
+    const faqObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("show", entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.01,
+        rootMargin: "0px 0px 18% 0px",
+      },
+    );
+
+    faqObserver.observe(faq);
   }
 
   if (contact) {
