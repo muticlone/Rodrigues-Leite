@@ -6,35 +6,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const whatsappBtn = document.querySelector(".whatsapp-btn");
   const btnAnimado = document.querySelector(".btn-whatsapp-animado");
   const contact = document.querySelector("#contact");
+  const hasBootstrapCollapse = Boolean(
+    window.bootstrap && window.bootstrap.Collapse,
+  );
+
+  if (menu && toggler && !hasBootstrapCollapse) {
+    toggler.addEventListener("click", () => {
+      const isOpen = menu.classList.toggle("show");
+
+      toggler.setAttribute("aria-expanded", String(isOpen));
+
+      if (overlay) {
+        overlay.classList.toggle("active", isOpen);
+      }
+    });
+  }
 
   document.querySelectorAll(".nav-link").forEach((link) => {
-    link.addEventListener("click", (e) => {
-      const targetId = link.getAttribute("href");
-
+    link.addEventListener("click", () => {
       if (menu && toggler && menu.classList.contains("show")) {
-        toggler.click();
-      }
-
-      if (targetId && targetId.startsWith("#")) {
-        const target = document.querySelector(targetId);
-
-        if (target) {
-          e.preventDefault();
-
-          setTimeout(() => {
-            const navbarHeight = navbarOverlay
-              ? navbarOverlay.offsetHeight
-              : 0;
-            const offset = window.innerWidth < 768 ? navbarHeight + 12 : 90;
-            const targetTop =
-              target.getBoundingClientRect().top + window.pageYOffset - offset;
-
-            window.scrollTo({
-              top: Math.max(targetTop, 0),
-              behavior: window.innerWidth < 768 ? "auto" : "smooth",
-            });
-          }, 60);
-        }
+        setTimeout(() => toggler.click(), 100);
       }
     });
   });
@@ -76,13 +67,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (menu && overlay) {
-    menu.addEventListener("show.bs.collapse", () => {
-      overlay.classList.add("active");
-    });
+    if (hasBootstrapCollapse) {
+      menu.addEventListener("show.bs.collapse", () => {
+        overlay.classList.add("active");
+      });
 
-    menu.addEventListener("hide.bs.collapse", () => {
-      overlay.classList.remove("active");
-    });
+      menu.addEventListener("hide.bs.collapse", () => {
+        overlay.classList.remove("active");
+      });
+    }
 
     overlay.addEventListener("click", () => {
       if (toggler && menu.classList.contains("show")) {

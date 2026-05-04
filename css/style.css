@@ -55,6 +55,16 @@ body > .row {
 /* garante fundo estável no mobile (remove flash branco) */
 html {
   background-color: var(--cor-fundo);
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+#inicio,
+#sobre,
+#servico,
+#local,
+#faq {
+  scroll-margin-top: 90px;
 }
 
 /* layout principal */
@@ -229,6 +239,7 @@ footer span:hover {
   content: "";
   position: absolute;
   inset: 0;
+  pointer-events: none;
 }
 
 /* ================= NAVBAR ================= */
@@ -242,6 +253,7 @@ footer span:hover {
   z-index: 1050;
   background: transparent;
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 
 .navbar-overlay .container-fluid {
@@ -250,6 +262,7 @@ footer span:hover {
   margin: 0 auto;
   padding: 12px 24px;
   align-items: flex-start;
+  pointer-events: auto;
 }
 
 /* efeito ao rolar */
