@@ -3,6 +3,7 @@
 ========================= */
 * {
   -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
 }
 :root {
   --cor-fundo: #001833;
@@ -24,6 +25,8 @@ body,
 #root {
   height: 100%;
   margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -35,6 +38,11 @@ body {
   color: var(--cor-texto);
   display: flex;
   flex-direction: column;
+}
+
+body > .row {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* FIX para desktop apenas */
@@ -230,10 +238,18 @@ footer span:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   z-index: 1050;
   background: transparent;
   transition: all 0.3s ease;
+}
+
+.navbar-overlay .container-fluid {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  align-items: flex-start;
 }
 
 /* efeito ao rolar */
@@ -271,8 +287,19 @@ footer span:hover {
 }
 
 /* ================= MENU ================= */
+.navbar-collapse {
+  flex-basis: 100%;
+}
+
+.navbar-collapse.show,
+.navbar-collapse.collapsing {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .navbar-nav {
   gap: 8px;
+  align-items: flex-end;
 }
 
 /* links */
@@ -303,8 +330,17 @@ footer span:hover {
 
 /* responsivo */
 @media (max-width: 768px) {
+  .navbar-overlay .container-fluid {
+    padding: 10px 16px;
+  }
+
+  .navbar-nav {
+    max-width: calc(100vw - 32px);
+  }
+
   .navbar-nav .nav-link {
-    min-width: auto;
+    min-width: 160px;
+    text-align: right;
   }
 }
 
@@ -487,18 +523,32 @@ footer span:hover {
 
 .scroll-text {
   opacity: 0.3;
-  transition: opacity 0.4s ease;
+  transition: opacity 1.4s ease;
+}
+
+.scroll-text.show {
+  opacity: 1;
 }
 
 .scroll-img {
   opacity: 0.2;
   transform: translateX(-80px) scale(0.95);
-  transition: transform 0.2s linear, opacity 0.2s linear;
+  transition:
+    transform 1.5s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 1.3s ease;
+}
+
+.scroll-img.show {
+  opacity: 1;
+  transform: translateX(0) scale(1);
 }
 
 #faq {
   opacity: 0.3;
   transform: scale(0.92) translateY(25px);
+  transition:
+    transform 1.5s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 1.3s ease;
   will-change: transform, opacity;
 }
 
@@ -588,7 +638,9 @@ footer span:hover {
 #contact {
   opacity: 0;
   transform: translateX(80px); /* começa à direita */
-  transition: all 0.8s ease;
+  transition:
+    transform 1.5s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 1.3s ease;
 }
 
 /* quando ativar */
