@@ -254,6 +254,7 @@ footer span:hover {
   background: transparent;
   transition: all 0.3s ease;
   pointer-events: none;
+  
 }
 
 .navbar-overlay .container-fluid {
@@ -263,6 +264,7 @@ footer span:hover {
   padding: 12px 24px;
   align-items: flex-start;
   pointer-events: auto;
+  
 }
 
 /* efeito ao rolar */
@@ -270,6 +272,7 @@ footer span:hover {
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(193, 154, 82, 0.3);
+  
 }
 
 /* ================= BOTÃO HAMBURGUER ================= */
@@ -278,6 +281,8 @@ footer span:hover {
   background-color: transparent !important;
   z-index: 10000;
   transition: all 0.2s ease;
+  
+  
 }
 
 /* remove contorno feio ao clicar */
@@ -297,6 +302,7 @@ footer span:hover {
 /* ícone branco */
 .navbar-toggler-icon {
   filter: invert(1);
+  
 }
 
 /* ================= MENU ================= */
