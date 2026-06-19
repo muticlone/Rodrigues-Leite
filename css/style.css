@@ -544,6 +544,115 @@ footer span:hover {
   overflow: hidden;
 }
 
+.final-section {
+  padding: 0 12px;
+}
+
+.final-section__content {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 42px;
+  text-align: center;
+
+  border-radius: 12px;
+ 
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(10px);
+}
+
+.final-section__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: var(--cor-dourado);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.final-section__eyebrow::before,
+.final-section__eyebrow::after {
+  content: "";
+  width: 34px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cor-dourado));
+}
+
+.final-section__eyebrow::after {
+  background: linear-gradient(90deg, var(--cor-dourado), transparent);
+}
+
+.final-section__intro {
+  max-width: 900px;
+  margin: 0 auto;
+  color: #f8fafc;
+  font-size: clamp(1.02rem, 1.8vw, 1.25rem);
+  line-height: 1.75;
+}
+
+.final-section strong {
+  color: #f1d79b;
+  font-weight: 700;
+}
+
+.final-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 34px;
+  text-align: left;
+}
+
+.final-section__item {
+  min-height: 100%;
+  padding: 26px;
+  border: 1px solid rgba(193, 154, 82, 0.18);
+  border-radius: 12px;
+  background: rgba(0, 24, 51, 0.58);
+}
+
+.final-section__item h2 {
+  margin-bottom: 16px;
+  color: var(--cor-dourado);
+  font-size: 1.18rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.final-section__item p {
+  margin-bottom: 14px;
+  color: #e2e8f0;
+  line-height: 1.7;
+  opacity: 0.92;
+}
+
+.final-section__item p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .final-section__content {
+    padding: 30px 20px;
+  }
+
+  .final-section__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .final-section__item {
+    padding: 22px 18px;
+  }
+
+  .final-section__eyebrow::before,
+  .final-section__eyebrow::after {
+    width: 18px;
+  }
+}
+
 .btn-whatsapp-animado {
   opacity: 0;
   transform: translate3d(-100px, 0, 0);
