@@ -16,11 +16,6 @@
       content="Escritório de advocacia especializado em Direito Previdenciário, Direito da Saúde e Direito Cível em Vitória da Conquista - BA. Atendimento humanizado, consultoria jurídica e soluções eficazes para aposentadorias, benefícios do INSS, planos de saúde e demandas cíveis."
     />
 
-    <meta
-      name="keywords"
-      content="advogado em Vitória da Conquista, advocacia previdenciária, advogado previdenciário, INSS, aposentadoria, benefício previdenciário, pensão por morte, BPC LOAS, advogado plano de saúde, direito da saúde, advogado cível, advocacia Vitória da Conquista"
-    />
-
     <meta name="robots" content="index, follow, max-image-preview:large" />
 
     <meta name="author" content="Rodrigues Leite Advocacia" />
@@ -89,19 +84,100 @@
       {
         "@context": "https://schema.org",
         "@type": "LegalService",
+        "@id": "https://rodriguesleiteadvocacia.com.br/#legalservice",
         "name": "Rodrigues Leite Advocacia",
-        "url": "https://rodriguesleiteadvocacia.com.br",
+        "url": "https://rodriguesleiteadvocacia.com.br/",
+        "logo": "https://rodriguesleiteadvocacia.com.br/assets/img/logo.webp",
         "image": "https://rodriguesleiteadvocacia.com.br/assets/img/advocacia-vitoria-da-conquista.webp",
-        "telephone": "+5577998523461",
-        "areaServed": {
-          "@type": "City",
-          "name": "Vitória da Conquista"
-        },
+
+        "description": "Escritório de advocacia especializado em Direito Previdenciário, Direito da Saúde, Direito Cível e Direito do Consumidor em Vitória da Conquista - BA.",
+
+        "telephone": "+55 77 99852-3461",
+        "email": "contato@rodriguesleiteadvocacia.com.br",
+
+        "priceRange": "$$",
+
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "Rua Caracas, 33",
           "addressLocality": "Vitória da Conquista",
           "addressRegion": "BA",
-          "addressCountry": "BR"
+          "postalCode": "45023-080",
+          "addressCountry": "BR",
+          "addressNeighborhood": "Jurema"
+        },
+
+        "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-14.8674306",
+        "longitude": "-40.8454127"
+        }
+
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "17:00"
+          }
+        ],
+
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Vitória da Conquista"
+          },
+          {
+            "@type": "State",
+            "name": "Bahia"
+          }
+        ],
+
+        "sameAs": [
+          "https://www.instagram.com/adv.emileleite",
+          "https://www.instagram.com/ezisrodrigues.adv",
+          "https://www.linkedin.com/in/emile-leiteadv-4a33a4407"
+        ],
+
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Áreas de atuação",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Direito Previdenciário"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Direito da Saúde"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Direito Cível"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Direito do Consumidor"
+              }
+            }
+          ]
         }
       }
     </script>
@@ -147,7 +223,7 @@
           media="(max-width: 1000px)"
         />
 
-        <img src="assets/img/capa.webp" class="foto-perfil" alt="Foto capa" />
+        <img src="assets/img/capa.webp" class="foto-perfil" alt="Escritório Rodrigues Leite Advocacia em Vitória da Conquista" />
       </picture>
 
       <nav class="navbar navbar-light navbar-overlay fixed-top">
@@ -198,16 +274,23 @@
       <div class="row" id="inicio">
         <!-- TÍTULO -->
         <div class="col-12 text-center mt-4">
-          <!-- <h1>
-            Advocacia em Direito Previdenciário e da Saúde em Vitória da
-            Conquista
-          </h1> -->
+          <h1 class="h1-titulo">
+            Escritório de Advocacia Previdenciária em Vitória da Conquista
+          </h1>
+
+          <h2 class="h2-titulo">
+            Atendimento especializado em Direito da Saúde, Direito Cível e
+            Direito do Consumidor
+          </h2>
+
           <p class="text-custom">
-            Somos um escritório de advocacia com atuação nas áreas de Direito
-            Previdenciário, Cível e da Saúde. Trabalhamos com atendimento
-            humanizado e estratégias eficazes para garantir que seus direitos
-            sejam respeitados na prática, trazendo segurança, dignidade e
-            soluções reais para cada cliente
+            A Rodrigues Leite Advocacia é um escritório formado por advogadas
+            com atuação especializada em Direito Previdenciário, Direito da
+            Saúde, Direito Cível e Direito do Consumidor. Prestamos atendimento
+            humanizado e desenvolvemos estratégias jurídicas eficazes para
+            garantir que os direitos dos nossos clientes sejam respeitados na
+            prática, oferecendo segurança, dignidade e soluções adequadas para
+            cada situação.
           </p>
         </div>
 
@@ -241,72 +324,85 @@
         <div class="col-12 text-center mt-5">
           <h2>Em quais situações podemos ajudar?</h2>
         </div>
+        <p class="mt-3 text-custom text-center">
+          Conheça as principais áreas de atuação da Rodrigues Leite Advocacia e
+          descubra como podemos auxiliar na defesa dos seus direitos.
+        </p>
       </div>
 
-      <div class="row" id="servico">
-        <!-- CARD -->
-        <div class="col-md-3 col-lg-3 mt-4 d-flex">
-          <div
-            class="card card-ajuste w-100 h-100"
-            style="background-color: #1d242f"
-          >
-            <div class="card-body text-white text-center">
-              <h6>Direito Previdenciário</h6>
-              <p class="card-text">
-                Atuação na concessão e revisão de benefícios do INSS, como
-                aposentadorias, pensões, auxílio-doença e salário-maternidade,
-                garantindo o acesso aos seus direitos.
-              </p>
-            </div>
-          </div>
-        </div>
+      <!-- SEÇÃO DE SERVIÇOS -->
 
-        <div class="col-md-3 col-lg-3 mt-4 d-flex">
-          <div
-            class="card card-ajuste w-100 h-100"
-            style="background-color: #1d242f"
-          >
-            <div class="card-body text-white text-center">
-              <h6>Direito Médico e da Saúde</h6>
-              <p class="card-text">
-                Defesa dos direitos do paciente frente a planos de saúde e ao
-                SUS, incluindo negativas de cobertura, cirurgias, medicamentos e
-                tratamentos.
-              </p>
+      <section id="servico">
+        <div class="container">
+          <div class="row">
+            <!-- CARD 1 -->
+            <div class="col-md-3 col-lg-3 mt-4 d-flex">
+              <div
+                class="card card-ajuste w-100 h-100"
+                style="background-color: #1d242f"
+              >
+                <div class="card-body text-white text-center">
+                  <h3 class="titulo-servico">Direito Previdenciário</h3>
+                  <p class="card-text">
+                    Atuação em aposentadoria por idade, aposentadoria por
+                    invalidez, auxílio-doença, pensão por morte,
+                    salário-maternidade, BPC LOAS e revisão de benefícios do
+                    INSS.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 2 -->
+            <div class="col-md-3 col-lg-3 mt-4 d-flex">
+              <div
+                class="card card-ajuste w-100 h-100"
+                style="background-color: #1d242f"
+              >
+                <div class="card-body text-white text-center">
+                  <h3 class="titulo-servico">Direito Médico e da Saúde</h3>
+                  <p class="card-text">
+                    Defesa dos direitos do paciente em casos de negativa de
+                    plano de saúde, cirurgias, medicamentos de alto custo,
+                    tratamentos especializados e demandas relacionadas ao SUS.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 3 -->
+            <div class="col-md-3 col-lg-3 mt-4 d-flex">
+              <div
+                class="card card-ajuste w-100 h-100"
+                style="background-color: #1d242f"
+              >
+                <div class="card-body text-white text-center">
+                  <h3 class="titulo-servico">Direito Cível</h3>
+                  <p class="card-text">
+                    Atuação em indenizações por danos morais e materiais,
+                    responsabilidade civil, contratos, cobranças e conflitos
+                    patrimoniais.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 4 -->
+            <div class="col-md-3 col-lg-3 mt-4 d-flex">
+              <div
+                class="card card-ajuste w-100 h-100"
+                style="background-color: #1d242f"
+              >
+                <div class="card-body text-white text-center">
+                  <h3 class="titulo-servico">Direito do Consumidor</h3>
+                  <p class="card-text">
+                    Atuação em cobranças indevidas, negativação indevida,
+                    problemas bancários, telefonia, energia elétrica, produtos
+                    defeituosos e conflitos decorrentes de compras online.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="col-md-3 col-lg-3 mt-4 d-flex">
-          <div
-            class="card card-ajuste w-100 h-100"
-            style="background-color: #1d242f"
-          >
-            <div class="card-body text-white text-center">
-              <h6>Direito Cível</h6>
-              <p class="card-text">
-                Soluções para conflitos do dia a dia, como indenizações,
-                contratos, responsabilidade civil e questões patrimoniais.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-lg-3 mt-4 d-flex">
-          <div
-            class="card card-ajuste w-100 h-100"
-            style="background-color: #1d242f"
-          >
-            <div class="card-body text-white text-center">
-              <h6>Direito do Consumidor</h6>
-              <p class="card-text">
-                Proteção contra práticas abusivas, cobranças indevidas, produtos
-                ou serviços defeituosos e garantia dos seus direitos nas
-                relações de consumo.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
       <!-- SEÇÃO DE COLABORADORES -->
       <div class="row pt-5">
         <!-- Card 1 -->
@@ -1023,7 +1119,7 @@
         <div class="col-md-6 pt-5">
           <img
             src="assets/img/p1ep2.webp"
-            alt="Imagem ilustrativa sobre quem somos"
+            alt="Advogada previdenciária em Vitória da Conquista"
             class="img-fluid rounded scroll-img"
             loading="lazy"
           />
@@ -1365,6 +1461,63 @@
           alt="WhatsApp"
         />
       </a>
+    </div>
+    <div class="col-12 text-center mt-5">
+      <span class="text-uppercase fw-semibold">
+        Atendimento Jurídico Especializado
+      </span>
+
+      <p class="lead mx-auto" style="max-width: 900px">
+        A <strong>Rodrigues Leite Advocacia</strong> oferece atendimento
+        jurídico especializado em Direito Previdenciário, Direito da Saúde,
+        Direito Cível e Direito do Consumidor, atuando em Vitória da Conquista e
+        em toda a região, com foco na defesa dos seus direitos e na busca das
+        melhores soluções para cada caso.
+      </p>
+
+      <div class="mt-5">
+        <h2 class="h3 fw-bold mb-3">
+          Especialistas em INSS, Aposentadorias e Planos de Saúde
+        </h2>
+
+        <p class="mx-auto" style="max-width: 900px">
+          Prestamos assessoria jurídica em casos de
+          <strong>aposentadoria por idade</strong>,
+          <strong>aposentadoria por invalidez</strong>,
+          <strong>auxílio-doença</strong>, <strong>pensão por morte</strong>,
+          <strong>salário-maternidade</strong>, <strong>BPC/LOAS</strong>,
+          <strong>revisão de benefícios do INSS</strong>
+          e demais demandas previdenciárias.
+        </p>
+
+        <p class="mx-auto" style="max-width: 900px">
+          Também atuamos em ações relacionadas à
+          <strong>negativa de plano de saúde</strong>, fornecimento de
+          medicamentos, tratamentos de alto custo, cirurgias, internações e
+          garantia do acesso à saúde perante operadoras e órgãos públicos.
+        </p>
+      </div>
+
+      <div class="mt-5">
+        <h2 class="h3 fw-bold mb-3">
+          Atendimento Humanizado e Defesa dos Seus Direitos
+        </h2>
+
+        <p class="mx-auto" style="max-width: 900px">
+          Na área cível e do consumidor, atuamos em demandas envolvendo
+          <strong>indenizações por danos morais e materiais</strong>,
+          responsabilidade civil, cobranças indevidas, negativação indevida,
+          conflitos contratuais e defesa dos direitos do consumidor.
+        </p>
+
+        <p class="mx-auto fs-5" style="max-width: 900px">
+          Nosso compromisso é oferecer um atendimento
+          <strong>humanizado, transparente e próximo</strong>, acompanhando cada
+          etapa do processo com dedicação, responsabilidade e estratégia, para
+          proporcionar segurança jurídica e os melhores resultados aos nossos
+          clientes.
+        </p>
+      </div>
     </div>
 
     <div class="col-12 text-center mt-5">
